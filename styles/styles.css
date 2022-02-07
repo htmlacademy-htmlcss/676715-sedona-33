@@ -14,7 +14,15 @@
   font-display: swap;
 }
 
+html {
+  height: 100%;
+}
+
 body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  margin: 0;
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 23px;
@@ -83,6 +91,29 @@ a.button-light {
   background-color: #ffffff;
 }
 
+.navigation {
+  display: flex;
+  width: 1060px;
+  margin: 0 auto;
+}
+
+.navigation-logo {
+  width: 140px;
+  margin-right: 47px;
+}
+
+.navigation-list {
+  margin: 0;
+  padding: 0;
+  width: 345px;
+  list-style-type: none;
+}
+
+.navigation-user {
+  max-width: 265px;
+  margin-left: auto;
+}
+
 .navigation-link {
   font-size: 20px;
   line-height: 26px;
@@ -102,6 +133,15 @@ a.button-light {
   background-color: #7DB550;
 }
 
+.main-container {
+  flex-grow: 1;
+}
+
+.page-container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
 .title {
   font-size: 30px;
   line-height: 36px;
@@ -113,6 +153,17 @@ a.button-light {
   background-color: #314850;
   background-image: url("../images/banner/banner-background.jpg");
   background-repeat: no-repeat;
+}
+
+.banner-container {
+  width: 458px;
+  margin: 0 auto;
+}
+
+.text-container {
+  width: 720px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 /* Advantages */
@@ -135,7 +186,25 @@ a.button-light {
   text-align: center;
 }
 
+.advantages-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.advantages-list li:nth-child(odd):not(:first-child) {
+  background-color: rgba(131, 179, 211, 0.12);
+}
+
+.advantages-list li:nth-child(even):not(:nth-child(2)) {
+  background-color: rgba(131, 179, 211, 0.2);
+}
+
 .advantages-item-main {
+	display: flex;
+	flex-wrap: wrap;
   background-color: #81b3d2;
 }
 
@@ -144,12 +213,8 @@ a.button-light {
   background-color: #83B3D3;
 }
 
-.advantages-item {
-  background-color: rgba(131, 179, 211, 0.12);
-}
-
-.advantages-item:nth-child(even) {
-  background-color: rgba(131, 179, 211, 0.2);
+.advantages-description-wrapper {
+  width: 400px;
 }
 
 .advantages-title {
@@ -165,16 +230,21 @@ a.button-light {
   text-align: center;
 }
 
+.advantages-image-wrapper {
+  width: 800px;
+}
+
+.advantages-image {
+  display: block;
+}
+
 .advantages-sublist {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
   background-color: #ffffff;
-}
-
-.black-text {
-  color: #000000;
-}
-
-.black-text p {
-  color: #333333;
+  list-style-type: none;
 }
 
 .advantages-sublist li:nth-child(odd) {
@@ -183,6 +253,10 @@ a.button-light {
 
 .advantages-sublist li:nth-child(even) {
   background-color: #ffffff;
+}
+
+.advantages-sublist-item {
+  width: 400px;
 }
 
 .advantages-sublist-item:nth-child(1) {
@@ -200,11 +274,20 @@ a.button-light {
   background-repeat: no-repeat;
 }
 
-.advantages-list li:nth-child(odd):not(:first-child) {
+.black-text {
+  color: #000000;
+}
+
+.black-text p {
+  color: #333333;
+}
+
+.advantages-item {
+  width: 400px;
   background-color: rgba(131, 179, 211, 0.12);
 }
 
-.advantages-list li:nth-child(even):not(:nth-child(2)) {
+.advantages-item:nth-child(even) {
   background-color: rgba(131, 179, 211, 0.2);
 }
 
@@ -222,7 +305,6 @@ a.button-light {
 }
 
 /* Newsletter */
-
 .newsletter-main {
   color: #ffffff;
   background-color: #93adba;
@@ -230,10 +312,32 @@ a.button-light {
   background-repeat: no-repeat;
 }
 
+.newsletter-container {
+  width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .newsletter-description {
   font-size: 22px;
   line-height: 26px;
   text-align: center;
+}
+
+.page-footer-container {
+  display: flex;
+  width: 1060px;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+
+.footer-social-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  max-width: 150px;
+  list-style-type: none;
 }
 
 .footer-social-link {
@@ -269,6 +373,12 @@ a.button-light {
   color: #ffffff;
 }
 
+.catalog-filter {
+  display: flex;
+  width: 1057px;
+  margin: 0 auto;
+}
+
 /* Filter */
 .catalog-filter-title {
   font-size: 20px;
@@ -282,6 +392,10 @@ a.button-light {
   line-height: 23px;
   color: #ffffff;
   background-color: transparent;
+}
+
+.catalog-top-container {
+  width: 1057px;
 }
 
 .search-results-title {
