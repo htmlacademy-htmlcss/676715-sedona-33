@@ -87,12 +87,12 @@ body {
   background-color: #7DB54F;
 }
 
-a.button-dark {
+.button-dark {
   color:#000000;
   text-decoration: none;
 }
 
-a.button-light {
+.button-light {
   color:#E5E5E5;
   text-decoration: underline;
 }
