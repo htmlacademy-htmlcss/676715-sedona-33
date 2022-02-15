@@ -30,6 +30,17 @@ body {
   background-color: #ffffff;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 /* Buttons */
 .button-small {
   font-family: "PT Sans", sans-serif;
@@ -76,13 +87,14 @@ body {
   background-color: #7DB54F;
 }
 
-a.button-dark {
+.button-dark {
   color:#000000;
   text-decoration: none;
 }
 
-a.button-light {
-  color:#000000;
+.button-light {
+  color:#E5E5E5;
+  text-decoration: underline;
 }
 
 /* Pages */
@@ -103,18 +115,25 @@ a.button-light {
 }
 
 .navigation-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   margin: 0;
   padding: 0;
-  width: 345px;
+  width: 480px;
   list-style-type: none;
 }
 
 .navigation-user {
+  display: flex;
+  align-items: center;
   max-width: 265px;
   margin-left: auto;
 }
 
 .navigation-link {
+  display: block;
+  padding: 20px 17px;
   font-size: 20px;
   line-height: 26px;
   font-weight: 700;
@@ -122,6 +141,11 @@ a.button-light {
   color: #000000;
   background-color: #ffffff;
   text-decoration: none;
+}
+
+.navigation-container {
+  display: flex;
+  align-items: center;
 }
 
 .navigation-link .favorites-number {
@@ -143,6 +167,7 @@ a.button-light {
 }
 
 .title {
+  margin: 0;
   font-size: 30px;
   line-height: 36px;
   text-align: center;
@@ -150,6 +175,7 @@ a.button-light {
 }
 
 .banner {
+  height: 485px;
   background-color: #314850;
   background-image: url("../images/banner/banner-background.jpg");
   background-repeat: no-repeat;
@@ -158,32 +184,39 @@ a.button-light {
 .banner-container {
   width: 458px;
   margin: 0 auto;
+  padding-top: 51px;
 }
 
 .text-container {
   width: 720px;
-  margin-right: auto;
-  margin-left: auto;
+  margin: 0 auto;
+  text-align: center;
 }
 
 /* Advantages */
+.sedona-container {
+  margin-top: 63px;
+  margin-bottom: 80px;
+}
+
 .sedona-title {
+  margin: 0;
+  margin-bottom: 31px;
   font-size: 30px;
   line-height: 36px;
   color: #000000;
   background-color: #ffffff;
   font-weight: 700;
   text-transform: uppercase;
-  text-align: center;
 }
 
-.sedona-about {
+.sedona-subtitle {
+  margin: 0;
   font-size: 22px;
   line-height: 36px;
   color: #333333;
   background-color: #ffffff;
   font-weight: 400;
-  text-align: center;
 }
 
 .advantages-list {
@@ -215,9 +248,17 @@ a.button-light {
 
 .advantages-description-wrapper {
   width: 400px;
+  min-height: 384px;
+}
+
+.advantages-item-main .advantages-description-container, .advantages-item .advantages-description-container {
+  width: 220px;
+  margin: 0 auto;
+  margin-top: 97px;
 }
 
 .advantages-title {
+  margin: 0;
   font-size: 24px;
   line-height: 28px;
   text-align: center;
@@ -225,9 +266,15 @@ a.button-light {
 }
 
 .advantages-description {
+  margin: 0;
   font-size: 18px;
   line-height: 21px;
   text-align: center;
+}
+
+.advantages-item-main .advantages-description:not(:last-child), .advantages-item .advantages-description:not(:last-child) {
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 .advantages-image-wrapper {
@@ -236,6 +283,7 @@ a.button-light {
 
 .advantages-image {
   display: block;
+  height: 100%
 }
 
 .advantages-sublist {
@@ -257,21 +305,21 @@ a.button-light {
 
 .advantages-sublist-item {
   width: 400px;
+  min-height: 384px;
+  background-repeat: no-repeat;
+  background-position: center 95px;
 }
 
 .advantages-sublist-item:nth-child(1) {
   background-image: url("../images/advantages/advantages-icon-1.svg");
-  background-repeat: no-repeat;
 }
 
 .advantages-sublist-item:nth-child(2) {
   background-image: url("../images/advantages/advantages-icon-2.svg");
-  background-repeat: no-repeat;
 }
 
 .advantages-sublist-item:nth-child(3) {
   background-image: url("../images/advantages/advantages-icon-3.svg");
-  background-repeat: no-repeat;
 }
 
 .black-text {
@@ -282,8 +330,19 @@ a.button-light {
   color: #333333;
 }
 
+.advantages-sublist-item .advantages-description-container {
+  width: 250px;
+  margin: 0 auto;
+  margin-top: 184px;
+}
+
+.advantages-sublist-item .advantages-title {
+  margin-bottom: 20px;
+}
+
 .advantages-item {
   width: 400px;
+  min-height: 384px;
   background-color: rgba(131, 179, 211, 0.12);
 }
 
@@ -291,7 +350,17 @@ a.button-light {
   background-color: rgba(131, 179, 211, 0.2);
 }
 
+.advantages-item .advantages-description-container {
+  width: 250px;
+}
+
+.search-container {
+margin-top: 91px;
+margin-bottom: 93px;
+}
+
 .search-title {
+  margin-bottom: 29px;
   color: #000000;
   background-color: #ffffff;
 }
@@ -306,19 +375,32 @@ a.button-light {
 
 /* Newsletter */
 .newsletter-main {
+  min-height: 411px;
   color: #ffffff;
   background-color: #93adba;
   background-image: url("../images/background-newsletter.jpg");
   background-repeat: no-repeat;
 }
 
-.newsletter-container {
+.newsletter-wrapper {
   width: 800px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
+  padding: 94px 0;
+  text-align: center;
+}
+
+.newsletter-container {
+  width: 500px;
+  margin: 0 auto;
+  margin-bottom: 46px;
+}
+
+.newsletter-title {
+  margin-bottom: 29px;
 }
 
 .newsletter-description {
+  margin: 0;
   font-size: 22px;
   line-height: 26px;
   text-align: center;
@@ -326,9 +408,11 @@ a.button-light {
 
 .page-footer-container {
   display: flex;
-  width: 1060px;
-  margin: 0 auto;
   justify-content: space-between;
+  align-items: center;
+  width: 1060px;
+  margin: 40px auto;
+
 }
 
 .footer-social-list {
@@ -336,8 +420,15 @@ a.button-light {
   flex-wrap: wrap;
   margin: 0;
   padding: 0;
-  max-width: 150px;
+  max-width: 200px;
   list-style-type: none;
+}
+
+.footer-social-item {
+  width: 21px;
+  height: 21px;
+  margin-right: 29px;
+  margin-bottom: 5px;
 }
 
 .footer-social-link {
@@ -361,16 +452,31 @@ a.button-light {
   background-repeat: no-repeat;
 }
 
+.inner-wrapper {
+  margin: 0 auto;
+  padding-top: 35px;
+  width: 1056px;
+}
+
 .inner-header-title {
+  margin: 0;
   font-size: 60px;
   line-height: 78px;
 }
 
 /* Breadcrumbs */
 .breadcrumbs {
+  display: flex;
+  margin: 0;
+  padding: 0;
   font-size: 16px;
   line-height: 21px;
   color: #ffffff;
+  list-style-type: none;
+}
+
+.breadcrumbs-link {
+  margin-right: 26px;
 }
 
 .catalog-filter {
@@ -394,16 +500,39 @@ a.button-light {
   background-color: transparent;
 }
 
+.catalog-elements {
+  margin-top: 50px;
+}
+
 .catalog-top-container {
+  display: flex;
   width: 1057px;
+  margin: 0 auto;
+  margin-bottom: 56px;
 }
 
 .search-results-title {
+  margin: 0;
   font-size: 30px;
   line-height: 39px;
   color: #000000;
   font-weight: 700;
   text-transform: uppercase;
+}
+
+.sorting-container {
+  display: flex;
+}
+
+.sorting-container .button-small {
+  width: 48px;
+  height: 48px;
+}
+
+.element-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 }
 
 .element-card-link {
@@ -423,11 +552,52 @@ a.button-light {
   text-transform: uppercase;
 }
 
+.pagination-show-more {
+  display: block;
+  margin: 30px auto;
+}
+
+.catalog-bottom-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1057px;
+  margin: 0 auto;
+  padding: 30px 0;
+  border-top: 1px solid #E5E5E5
+}
+
+.pagination {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.pagination-item:not(:last-child) {
+  margin-right: 8px;
+}
+
+.pagination-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 55px;
+  height: 55px;
+  border-radius: 4px;
+}
+
 .pagination-current {
   color:#000000;
   background-color: #F2F2F2;
 }
 
+.newsletter-inner .newsletter-wrapper {
+  padding-top: 43px;
+  padding-bottom: 141px;
+}
+
 .newsletter-inner .title {
+  margin-bottom: 46px;
   color:#000000;
 }
