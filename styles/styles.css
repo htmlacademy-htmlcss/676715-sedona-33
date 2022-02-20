@@ -179,6 +179,7 @@ body {
   background-color: #314850;
   background-image: url("../images/banner/banner-background.jpg");
   background-repeat: no-repeat;
+  background-size: auto 485px;
 }
 
 .banner-container {
@@ -308,6 +309,7 @@ body {
   min-height: 384px;
   background-repeat: no-repeat;
   background-position: center 95px;
+  background-size: auto auto;
 }
 
 .advantages-sublist-item:nth-child(1) {
@@ -380,6 +382,7 @@ margin-bottom: 93px;
   background-color: #93adba;
   background-image: url("../images/background-newsletter.jpg");
   background-repeat: no-repeat;
+  background-size: auto 411px;
 }
 
 .newsletter-wrapper {
@@ -450,6 +453,7 @@ margin-bottom: 93px;
   background-color: #799abd;
   background-image: url("../images/background-catalog.jpg");
   background-repeat: no-repeat;
+  background-size: auto auto;
 }
 
 .inner-wrapper {
