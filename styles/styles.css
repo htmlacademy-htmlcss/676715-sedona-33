@@ -616,7 +616,6 @@ img {
 }
 
 /* Invalid */
-/*
 .field:invalid,
 .field.error {
   border: 2px solid #FF5757;
@@ -628,7 +627,6 @@ img {
   background-color: #FFFFFF;
   outline: none;
 }
-*/
 
 /* Placeholder */
 .field::placeholder {
