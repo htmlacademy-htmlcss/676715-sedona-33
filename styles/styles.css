@@ -960,12 +960,14 @@ img {
   color: #000000;
   background-color: transparent;
   border: none;
-  appearance: textfield;
+  -webkit-appearance: textfield;
+          appearance: textfield;
 }
 
 .number-input::-webkit-outer-spin-button,
 .number-input::-webkit-inner-spin-button {
-  appearance: none;
+  -webkit-appearance: none;
+          appearance: none;
   margin: 0;
 }
 
@@ -1259,12 +1261,14 @@ img {
   color:#FFFFFF;
   background-color: transparent;
   border: 2px solid #FFFFFF;
-  appearance: textfield;
+  -webkit-appearance: textfield;
+          appearance: textfield;
 }
 
 .range-input::-webkit-outer-spin-button,
 .range-input::-webkit-inner-spin-button {
-  appearance: none;
+  -webkit-appearance: none;
+          appearance: none;
   margin: 0;
 }
 
@@ -1461,7 +1465,8 @@ img {
   background-position: right 21px center;
   border: 2px solid #E5E5E5;
   border-radius: 4px;
-  appearance: none;
+  -webkit-appearance: none;
+          appearance: none;
 }
 
 .select-control:hover,
