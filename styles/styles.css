@@ -616,17 +616,19 @@ img {
 }
 
 /* Invalid */
-/* .field:invalid,
-.filed.error {
+/*
+.field:invalid,
+.field.error {
   border: 2px solid #FF5757;
 }
 
 .field:focus:invalid,
-filed.error:invalid {
+.field.error:invalid {
   border: 2px solid #FF5757;
   background-color: #FFFFFF;
   outline: none;
-} */
+}
+*/
 
 /* Placeholder */
 .field::placeholder {
