@@ -382,8 +382,8 @@ img {
 }
 
 .advantages-item-main {
-	display: flex;
-	flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
   background-color: #81b3d2;
 }
 
@@ -616,13 +616,7 @@ img {
 }
 
 /* Invalid */
-.field:invalid,
-.field.error {
-  border: 2px solid #FF5757;
-}
-
-.field:focus:invalid,
-.field.error:invalid {
+.field-error {
   border: 2px solid #FF5757;
   background-color: #FFFFFF;
   outline: none;
@@ -672,7 +666,7 @@ img {
 }
 
 .footer-social-link:hover {
-	color: #68A2CA;
+  color: #68A2CA;
 }
 
 .footer-social-link:focus {
@@ -692,7 +686,7 @@ img {
 }
 
 .footer-social-link:hover .footer-social-icon {
-	fill: #68A2CA;
+  fill: #68A2CA;
 }
 
 .footer-social-link:focus .footer-social-icon {
@@ -864,7 +858,8 @@ img {
 .search-form .field {
   width: 355px;
   padding: 10px 45px 10px 20px;
-  font: inherit;
+  font-family: "PT Sans", sans-serif;
+  font-size: 18px;
   line-height: 30px;
   font-weight: 700;
   background-image: url("../images/icon-search-calender.svg");
@@ -874,6 +869,7 @@ img {
 }
 
 .field-error-show {
+  display: none;
   margin-top: -7px;
   margin-left: 155px;
   font-size: 16px;
@@ -881,11 +877,12 @@ img {
   color: #FF5757;
 }
 
-.field-error .field-error-show {
+.field-group .field-error-show {
   display: block;
 }
 
 .field-truth-show {
+  display: none;
   margin-top: -7px;
   margin-left: 155px;
   font-size: 16px;
@@ -893,7 +890,7 @@ img {
   color: #333333;
 }
 
-.field-truth .field-truth-show {
+.field-group .field-truth-show {
   display: block;
 }
 
@@ -1141,12 +1138,12 @@ img {
 }
 
 .catalog-filter-group:nth-last-of-type(2) {
-	margin-right: auto;
+  margin-right: auto;
 }
 
 .catalog-filter-group:last-of-type {
-	width: 290px;
-	margin-right: 79px;
+  width: 290px;
+  margin-right: 79px;
 }
 
 .catalog-filter-title {
